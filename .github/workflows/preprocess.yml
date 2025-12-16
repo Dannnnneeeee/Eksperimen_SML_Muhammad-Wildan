@@ -27,7 +27,7 @@ jobs:
       
       # Step 2: Setup Python
       - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
       
@@ -66,9 +66,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
       
-      # Step 8: Upload artifact (opsional - untuk download)
+      # Step 8: Upload artifact (UPDATED - gunakan v4)
       - name: Upload preprocessed data as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: toyota-clean-data
           path: preprocessing/toyota_clean/toyota_clean.csv
@@ -78,7 +78,7 @@ jobs:
       - name: Job Summary
         if: always()
         run: |
-          echo "## Preprocessing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "##  Preprocessing Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo " **Preprocessing completed successfully!**" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
