@@ -34,13 +34,17 @@ print("="*80)
 print("\n[SETUP] Configuring DagsHub...")
 
 # GANTI INI DENGAN CREDENTIALS DAGSHUB ANDA
-DAGSHUB_USERNAME = "Dannnnneeee"  # Ganti dengan username DagsHub Anda
-DAGSHUB_REPO = "Eksperimen_SML_Muhammad-Wildan"  # Ganti dengan nama repo Anda
-DAGSHUB_TOKEN = "dantoken"  # Ganti dengan token DagsHub Anda (optional untuk private repo)
+import os
 
-# Set DagsHub as MLflow tracking URI
-dagshub_url = f"https://dagshub.com/Dannnnneeeee/Eksperimen_SML_Muhammad-Wildan.mlflow"
-mlflow.set_tracking_uri(dagshub_url)
+os.environ["DAGSHUB_USER_NAME"] = "Dannnnneeeee"
+os.environ["DAGSHUB_TOKEN"] = "3c502b7943cd0698e71e141e4e5917cd4caa0ffb"
+
+import dagshub
+dagshub.init(
+    repo_owner="Dannnnneeeee",
+    repo_name="Eksperimen_SML_Muhammad-Wildan",
+    mlflow=True
+)
 
 # Alternative: untuk lokal testing (comment bagian DagsHub di atas)
 # mlflow.set_tracking_uri("file:./mlruns")
@@ -431,7 +435,7 @@ print("   ✓ Train/Val/Test Split")
 print("   ✓ Overfitting Check")
 
 print("\n VIEW RESULTS:")
-print(f"   DagsHub: https://dagshub.com/{DAGSHUB_USERNAME}/{DAGSHUB_REPO}")
+print(f"   DagsHub: https://dagshub.com/Dannnnneeeee/Eksperimen_SML_Muhammad-Wildan")
 print(f"   Or MLflow UI: mlflow ui --host 0.0.0.0 --port 5000")
 
 print("\n SCREENSHOTS NEEDED:")
