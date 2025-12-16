@@ -155,13 +155,6 @@ def encode_categorical(df, columns):
     """
     Fungsi untuk encoding kolom kategorikal menggunakan Label Encoding
     
-    Parameter:
-        df (DataFrame): Data input
-        columns (list): List kolom kategorikal yang akan di-encode
-    
-    Return:
-        df (DataFrame): Data dengan kolom yang sudah di-encode
-        encoders (dict): Dictionary berisi encoder untuk setiap kolom
     """
     print("\n" + "="*70)
     print("STEP 5: ENCODING DATA KATEGORIKAL")
