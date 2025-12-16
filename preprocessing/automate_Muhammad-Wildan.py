@@ -286,7 +286,7 @@ def preprocess_pipeline(input_path, output_path):
     print(f"• Data akhir: {len(df)} baris × {df.shape[1]} kolom")
     print(f"• Kolom numerik (scaled): {len(numerical_columns)}")
     print(f"• Kolom kategorikal (encoded): {len(categorical_columns)}")
-    print(f"\nData siap untuk modeling! 🚀")
+    print(f"\nData siap untuk modeling! ")
 
 
 # ================================================================================
