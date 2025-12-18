@@ -289,10 +289,6 @@ def preprocess_pipeline(input_path, output_path):
     print(f"\nData siap untuk modeling! ")
 
 
-# ================================================================================
-# MAIN PROGRAM
-# ================================================================================
-
 if __name__ == "__main__":
     """
     Program utama yang akan dijalankan ketika file ini dieksekusi
