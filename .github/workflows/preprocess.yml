@@ -67,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: toyota-clean-data-${{ github.run_number }}
-          path: preprocessing/toyota_clean/toyota_clean.csv
+          path: preprocessing/toyota_preprocessing/toyota_preprocessing.csv
           retention-days: 30
       
       # Summary yang bagus
