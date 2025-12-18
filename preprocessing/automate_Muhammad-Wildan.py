@@ -305,8 +305,8 @@ if __name__ == "__main__":
     
     # Path ke data mentah dan data bersih
     # Sesuaikan dengan struktur folder Anda
-    INPUT_PATH = '../toyota_raw/toyota.csv'  # Relative path dari folder preprocessing/
-    OUTPUT_PATH = 'toyota_clean/toyota_clean.csv'  # Output di preprocessing/toyota_clean/
+    INPUT_PATH = '../toyota_raw/toyota_raw.csv'  # Relative path dari folder preprocessing/
+    OUTPUT_PATH = 'toyota_preprocessing/toyota_preprocessing.csv'  # Output di preprocessing/toyota_clean/
     
     # Jalankan pipeline preprocessing
     preprocess_pipeline(INPUT_PATH, OUTPUT_PATH)

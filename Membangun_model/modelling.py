@@ -29,7 +29,7 @@ print("="*80)
 # 1. LOAD DATA
 # ================================================================================
 print("\n[1/7] Loading preprocessed data...")
-df = pd.read_csv('toyota_clean.csv')
+df = pd.read_csv('toyota_preprocessing.csv')
 print(f"✓ Data loaded: {len(df)} rows, {df.shape[1]} columns")
 
 # ================================================================================
@@ -224,9 +224,6 @@ with mlflow.start_run(run_name="XGBoost_Basic"):
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     print(f"✓ Evaluation plot saved: {plot_path}")
     
-    # Log additional artifacts to MLflow
-    mlflow.log_artifact(plot_path)
-    
     plt.close()
     
     print("✓ Model and artifacts logged to MLflow")
@@ -237,20 +234,7 @@ with mlflow.start_run(run_name="XGBoost_Basic"):
 print("\n" + "="*80)
 print("✓ MODELING BASIC SELESAI!")
 print("="*80)
-print("\n📁 FILES GENERATED:")
-print("   ✓ model_evaluation.png - Visualization of model performance")
-print("\n🎯 NEXT STEPS:")
-print("   1. Buka terminal baru")
-print("   2. Jalankan: mlflow ui --host 0.0.0.0 --port 5000")
-print("   3. Buka browser: http://localhost:5000")
-print("   4. Screenshot MLflow UI dashboard dan artifacts")
-print("\n📊 MLflow UI akan menampilkan:")
-print("   • Model parameters")
-print("   • Performance metrics (RMSE, MAE, R²)")
-print("   • Feature importance plot")
-print("   • Model artifacts")
-print("   • Training plots")
-print("\n📌 EXPERIMENT INFO:")
+print("\n EXPERIMENT INFO:")
 print(f"   Name: Toyota_Price_Prediction_Basic")
 print(f"   Algorithm: XGBoost Regressor")
 print(f"   Accuracy: {accuracy:.2f}%")

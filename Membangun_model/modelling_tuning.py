@@ -55,7 +55,7 @@ print(f"✓ MLflow Tracking URI: {mlflow.get_tracking_uri()}")
 # 1. LOAD DATA
 # ================================================================================
 print("\n[1/9] Loading preprocessed data...")
-df = pd.read_csv('toyota_clean.csv')
+df = pd.read_csv('toyota_preprocessing.csv')
 print(f"✓ Data loaded: {len(df)} rows, {df.shape[1]} columns")
 
 # ================================================================================

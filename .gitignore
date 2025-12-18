@@ -25,3 +25,8 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+Membangun_model/artifak/
+
+*:Zone.Identifier
+
